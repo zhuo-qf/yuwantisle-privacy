@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>渔王岛 隐私政策</title>
+<meta name="description" content="《渔王岛》Android 版隐私政策，说明本游戏收集与使用个人信息的方式，以及第三方广告 SDK 的清单、权限与用途。">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f8fa;
+    --fg:#1f2328;
+    --fg-mute:#57606a;
+    --line:#e3e7eb;
+    --brand:#1b6fa8;
+    --brand-soft:#eef6fb;
+    --warn-bg:#fff8e1;
+    --warn-line:#f0c36d;
+    --warn-fg:#7a4b00;
+    --radius:10px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#12161b; --bg-soft:#1a1f26; --fg:#e6edf3; --fg-mute:#9aa7b4;
+      --line:#2b323b; --brand:#6cb6e0; --brand-soft:#16242e;
+      --warn-bg:#2c2411; --warn-line:#7a5c1e; --warn-fg:#f0c36d;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    font-size:16px; line-height:1.85; letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:800px; margin:0 auto; padding:48px 24px 96px;}
+
+  header.top{border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:8px;}
+  .kicker{
+    display:inline-block; font-size:12px; font-weight:600; letter-spacing:.14em;
+    color:var(--brand); background:var(--brand-soft); border-radius:999px;
+    padding:4px 12px; margin-bottom:16px; text-transform:uppercase;
+  }
+  h1{font-size:30px; line-height:1.35; margin:0 0 18px; font-weight:700; letter-spacing:-.01em;}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 28px; font-size:14px; color:var(--fg-mute);}
+  .meta b{color:var(--fg); font-weight:600;}
+
+  nav.toc{
+    background:var(--bg-soft); border:1px solid var(--line); border-radius:var(--radius);
+    padding:20px 24px; margin:32px 0 8px;
+  }
+  nav.toc h2{font-size:13px; letter-spacing:.1em; color:var(--fg-mute); margin:0 0 12px; text-transform:uppercase; font-weight:600;}
+  nav.toc ol{margin:0; padding-left:20px; columns:2; column-gap:32px; font-size:14.5px;}
+  nav.toc li{margin:5px 0; break-inside:avoid;}
+  nav.toc a{color:var(--fg); text-decoration:none; border-bottom:1px solid transparent;}
+  nav.toc a:hover{color:var(--brand); border-bottom-color:var(--brand);}
+  @media (max-width:640px){ nav.toc ol{columns:1;} }
+
+  section{margin-top:44px; scroll-margin-top:20px;}
+  h2{font-size:20px; margin:0 0 14px; font-weight:700; letter-spacing:-.005em; padding-top:4px;}
+  h2 .num{color:var(--brand); margin-right:10px; font-variant-numeric:tabular-nums;}
+  h3{font-size:16px; margin:26px 0 10px; font-weight:600;}
+  p{margin:0 0 14px;}
+  ul,ol{margin:0 0 14px; padding-left:22px;}
+  li{margin:6px 0;}
+  strong{font-weight:600;}
+  a{color:var(--brand);}
+  .muted{color:var(--fg-mute); font-size:14px;}
+
+  table{width:100%; border-collapse:collapse; margin:16px 0 18px; font-size:14px; line-height:1.6;}
+  th,td{border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top;}
+  th{background:var(--bg-soft); font-weight:600; white-space:nowrap;}
+  td code{font-size:12.5px; background:var(--bg-soft); padding:1px 5px; border-radius:4px; word-break:break-all;}
+  .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+
+  .callout{
+    border-left:3px solid var(--brand); background:var(--brand-soft);
+    padding:14px 18px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0;
+    font-size:15px;
+  }
+  .todo{
+    background:var(--warn-bg); border:1px dashed var(--warn-line); color:var(--warn-fg);
+    padding:2px 8px; border-radius:4px; font-weight:600; font-size:.95em;
+  }
+  hr{border:0; border-top:1px solid var(--line); margin:44px 0 0;}
+  footer{margin-top:44px; padding-top:24px; border-top:1px solid var(--line); font-size:13.5px; color:var(--fg-mute);}
+  footer p{margin:6px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="kicker">隐私政策</span>
+  <h1>渔王岛 隐私政策</h1>
+  <div class="meta">
+    <span><b>适用产品</b>　渔王岛（Android 版）</span>
+    <span><b>开发者</b>　卓庆番</span>
+    <span><b>应用包名</b>　com.kamy.yuwantisle</span>
+    <span><b>更新日期</b>　2026 年 11 月 3 日</span>
+    <span><b>生效日期</b>　2026 年 11 月 3 日</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#s1">引言</a></li>
+    <li><a href="#s2">开发者与联系方式</a></li>
+    <li><a href="#s3">我们收集与不收集的信息</a></li>
+    <li><a href="#s4">系统权限与使用说明</a></li>
+    <li><a href="#s5">第三方 SDK 清单</a></li>
+    <li><a href="#s6">信息的使用目的与法律依据</a></li>
+    <li><a href="#s7">信息的存储、期限与安全</a></li>
+    <li><a href="#s8">信息的共享、转让与公开披露</a></li>
+    <li><a href="#s9">您如何管理自己的信息</a></li>
+    <li><a href="#s10">未成年人保护</a></li>
+    <li><a href="#s11">本政策的更新</a></li>
+    <li><a href="#s12">联系我们</a></li>
+  </ol>
+</nav>
+
+<section id="s1">
+  <h2><span class="num">一</span>引言</h2>
+  <p>
+    《渔王岛》（以下简称“本游戏”）是一款由卓庆番（以下简称“我们”）开发的单机休闲游戏。
+    我们充分理解个人信息对您的重要性，并严格遵守《中华人民共和国个人信息保护法》《中华人民共和国网络安全法》
+    《中华人民共和国数据安全法》以及工业和信息化部《App 违法违规收集使用个人信息行为认定方法》等法律法规与监管要求。
+  </p>
+  <p>
+    本政策旨在清晰、准确、完整地说明：本游戏会处理哪些信息、为什么要处理、如何处理，以及您对这些信息享有哪些权利。
+    <strong>请您在使用本游戏前仔细阅读并充分理解本政策，特别是以加粗形式提示的内容。</strong>
+    当您点击“同意”时，即表示您已阅读并同意本政策所述的信息处理方式。
+  </p>
+  <div class="callout">
+    一句话概括：本游戏是纯单机游戏，<strong>没有账号体系，不会上传您的存档与个人信息</strong>；
+    唯一涉及第三方数据采集的，是我们接入的 TapADN 广告 SDK —— 且<b>仅在您明确同意后才会初始化</b>。
+    若您选择“不同意”，游戏仍可完整游玩，只是无法使用“看广告领取奖励”类功能。
+  </div>
+</section>
+
+<section id="s2">
+  <h2><span class="num">二</span>开发者与联系方式</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>项目</th><th>内容</th></tr>
+    <tr><td>开发者（个人信息处理者）</td><td>卓庆番</td></tr>
+    <tr><td>联系邮箱</td><td><a href="mailto:15815965834@163.com">15815965834@163.com</a></td></tr>
+    <tr><td>适用范围</td><td>本游戏 Android 版本（包名 <code>com.kamy.yuwantisle</code>）及后续更新版本</td></tr>
+    <tr><td>响应时限</td><td>我们将在收到您请求后的 <b>15 个工作日</b>内回复</td></tr>
+  </table>
+  </div>
+</section>
+
+<section id="s3">
+  <h2><span class="num">三</span>我们收集与不收集的信息</h2>
+
+  <h3>3.1 本游戏不收集的信息</h3>
+  <p>为消除您的疑虑，以下信息本游戏<strong>不收集、不上传、不共享</strong>：</p>
+  <ul>
+    <li>手机号、身份证号、真实姓名、电子邮箱等<strong>可用于识别您真实身份的信息</strong>；</li>
+    <li>通讯录、短信、通话记录、相册、摄像头、麦克风、地理位置（GPS）；</li>
+    <li>您的游戏存档（金币、船只、天赋、图鉴、昵称等）。</li>
+  </ul>
+  <p>
+    您的游戏进度与设置（如昵称、金币、音量）<strong>仅保存在您设备本地的存储空间中</strong>，
+    不会上传至我们的服务器。卸载游戏或在系统设置中清除应用数据，这些本地数据将被一并删除且无法恢复。
+  </p>
+
+  <h3>3.2 广告功能相关的信息</h3>
+  <p>
+    本游戏包含“观看激励视频广告领取奖励”的可选功能（例如补充体力、退还赌局本金）。
+    该功能由第三方广告 SDK 提供，<strong>只有在您于首次启动弹窗中点击“同意”后</strong>，SDK 才会初始化并开始工作。
+    在此情况下，广告 SDK 可能收集以下信息：
+  </p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>信息类别</th><th>具体内容</th></tr>
+    <tr>
+      <td>设备标识符</td>
+      <td>OAID（匿名设备标识符）、Android ID、VAID、AAID、IMEI、MEID、IMSI、硬件序列号</td>
+    </tr>
+    <tr>
+      <td>设备基础信息</td>
+      <td>设备品牌、型号、制造商、操作系统版本、屏幕分辨率与密度、设备语言与时区、CPU 信息、可用存储空间与总内存、系统重启时间、运营商信息</td>
+    </tr>
+    <tr>
+      <td>网络信息</td>
+      <td>IP 地址、网络类型与连接状态、Wi-Fi 状态与信号强度、Wi-Fi 名称（SSID）、BSSID、基站信息</td>
+    </tr>
+    <tr>
+      <td>应用信息</td>
+      <td>应用包名、应用版本号、应用前后台状态、运行中的进程信息、已安装应用列表</td>
+    </tr>
+    <tr>
+      <td>传感器信息</td>
+      <td>加速度传感器、陀螺仪传感器、线性加速度传感器、磁场传感器、旋转矢量传感器</td>
+    </tr>
+    <tr>
+      <td>位置信息</td>
+      <td>粗略位置信息（由 IP 地址或 Wi-Fi 信息推导），用于广告地域定向</td>
+    </tr>
+    <tr>
+      <td>广告交互数据</td>
+      <td>广告的展示、点击、播放完成、关闭等行为记录</td>
+    </tr>
+  </table>
+  </div>
+  <div class="callout">
+    <strong>关于传感器与位置：</strong>上述传感器与位置信息由广告 SDK 用于识别模拟器、防范广告作弊以及广告地域定向，
+    本游戏自身的玩法不使用任何传感器数据。<strong>本游戏不会请求定位权限</strong>，位置信息由 SDK 依据 IP / Wi-Fi 推断得出。
+  </div>
+</section>
+
+<section id="s4">
+  <h2><span class="num">四</span>系统权限与使用说明</h2>
+  <p>本游戏在安装包中声明的权限及其用途如下。除“网络”类权限外，其余权限均由广告 SDK 声明，<strong>不会向您弹出授权申请</strong>：</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>权限</th><th>用途</th><th>是否可关闭</th></tr>
+    <tr>
+      <td><code>INTERNET</code><br>访问网络</td>
+      <td>请求与加载广告素材；无网络时游戏核心玩法不受影响</td>
+      <td>可通过系统“飞行模式”或断网关闭</td>
+    </tr>
+    <tr>
+      <td><code>ACCESS_NETWORK_STATE</code><br>读取网络状态</td>
+      <td>判断当前是否联网，避免在无网络时无效请求广告、减少电量消耗</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td><code>ACCESS_WIFI_STATE</code><br>读取 Wi-Fi 状态</td>
+      <td>广告 SDK 判断网络质量、辅助广告地域定向与反作弊</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td><code>QUERY_ALL_PACKAGES</code><br>查询已安装应用列表</td>
+      <td>
+        广告 SDK 用于：判断广告落地页所指向的应用是否已安装、识别微信等应用以选择正确的广告跳转方式、
+        识别设备上是否存在作弊工具以进行广告反作弊校验。<strong>本游戏自身不读取、不上传您的应用列表。</strong>
+      </td>
+      <td>否（SDK 依赖）</td>
+    </tr>
+    <tr>
+      <td><code>REQUEST_INSTALL_PACKAGES</code><br>请求安装应用</td>
+      <td>
+        当您点击“下载类”广告后，由广告 SDK 发起安装流程。<strong>本游戏不会主动安装任何应用</strong>，
+        安装动作必须由您在系统弹窗中再次确认才会执行。
+      </td>
+      <td>可通过系统“安装未知应用”设置关闭</td>
+    </tr>
+  </table>
+  </div>
+  <p class="muted">
+    说明：以上权限清单依据本游戏当前版本的安装包实际声明情况整理。若后续版本调整，我们会同步更新本政策。
+  </p>
+</section>
+
+<section id="s5">
+  <h2><span class="num">五</span>第三方 SDK 清单</h2>
+  <p>本游戏接入的第三方 SDK 如下，我们已对其个人信息处理行为进行合规评估：</p>
+  <div class="table-scroll">
+  <table>
+    <tr>
+      <th>SDK 名称</th>
+      <th>提供方</th>
+      <th>使用目的与场景</th>
+      <th>处理的个人信息</th>
+      <th>隐私政策</th>
+    </tr>
+    <tr>
+      <td>TapADN SDK<br><span class="muted">（Dirichlet 聚合广告）</span></td>
+      <td>易玩（上海）网络科技有限公司</td>
+      <td>
+        广告投放与展示、广告效果监测与归因、反作弊、统计分析、减少应用崩溃、提供稳定服务。
+        使用场景：您主动点击“观看广告”后播放激励视频广告。
+      </td>
+      <td>见本政策第 3.2 条所列各类信息</td>
+      <td>
+        <a href="https://ssp.taptap.cn/privacy" target="_blank" rel="noopener">https://ssp.taptap.cn/privacy</a>
+      </td>
+    </tr>
+  </table>
+  </div>
+  <p>
+    除上述 SDK 外，本游戏<strong>未接入任何其他会收集个人信息的第三方 SDK</strong>
+    （不含统计、推送、登录、支付、崩溃上报类 SDK）。
+  </p>
+  <p class="muted">
+    提示：第三方 SDK 的个人信息处理行为由其自行负责。我们建议您同时阅读上表中链接的官方隐私政策，
+    以了解其完整的信息处理规则。
+  </p>
+</section>
+
+<section id="s6">
+  <h2><span class="num">六</span>信息的使用目的与法律依据</h2>
+  <p>我们（及上述第三方 SDK）处理您的信息，仅用于以下明确、合理的目的：</p>
+  <ol>
+    <li><strong>向您提供激励视频广告</strong>，并在您完整观看后发放对应的游戏内奖励（如体力、退还赌局本金）；</li>
+    <li><strong>广告效果统计与归因</strong>，用于评估广告投放效果、结算广告收益；</li>
+    <li><strong>反作弊与安全风控</strong>，识别模拟器、虚假点击、批量刷奖励等异常行为，保障广告主与您的合法权益；</li>
+    <li><strong>保障服务稳定性</strong>，收集崩溃与性能数据以减少闪退、提升加载成功率。</li>
+  </ol>
+  <p>
+    <strong>法律依据：</strong>上述处理均基于您的<strong>同意</strong>（《个人信息保护法》第十三条第一款第（一）项）。
+    您有权随时撤回该同意，撤回后我们将停止相应的信息处理，且不影响撤回前基于同意已进行的处理活动的效力。
+  </p>
+  <p>
+    <strong>我们不会将您的信息用于：</strong>个性化推荐以外的自动化决策（如大数据“杀熟”）、
+    与上述目的无关的商业推广、或任何违反法律法规的用途。
+  </p>
+</section>
+
+<section id="s7">
+  <h2><span class="num">七</span>信息的存储、期限与安全</h2>
+  <h3>7.1 存储地点</h3>
+  <p>
+    本游戏<strong>不设有服务器，也不向任何自有服务器传输数据</strong>。您的游戏存档仅存储于您的设备本地。
+    广告 SDK 所采集的信息存储于其境内服务器（中华人民共和国境内），不涉及跨境传输。
+  </p>
+  <h3>7.2 存储期限</h3>
+  <p>
+    广告 SDK 采集的信息保存期限遵循其官方隐私政策的规定，通常为实现上述目的所必需的最短时间。
+    达成目的或您撤回同意后，相关信息将被删除或匿名化处理，法律法规另有规定的除外。
+    您设备本地的游戏存档在您卸载游戏或清除应用数据时即被删除。
+  </p>
+  <h3>7.3 安全措施</h3>
+  <ul>
+    <li>广告请求与素材传输采用 <strong>HTTPS 加密通道</strong>；</li>
+    <li>广告 SDK 对设备标识符进行去标识化 / 匿名化处理（优先使用 OAID 等可重置标识符）；</li>
+    <li>我们仅在必要范围内接入 SDK，并通过代码层面确保<strong>未经您同意不初始化任何广告 SDK</strong>。</li>
+  </ul>
+  <p>
+    尽管我们已采取合理的安全措施，但互联网环境并非绝对安全。
+    如不幸发生个人信息安全事件，我们将按法律法规要求及时告知您并向主管部门报告。
+  </p>
+</section>
+
+<section id="s8">
+  <h2><span class="num">八</span>信息的共享、转让与公开披露</h2>
+  <ul>
+    <li><strong>共享：</strong>除本政策第五条列明的广告 SDK 外，我们不会与任何第三方共享您的个人信息。广告 SDK 系直接在其服务器间完成数据处理，我们不接触、不留存这些数据。</li>
+    <li><strong>转让：</strong>我们不会转让您的个人信息。若因合并、分立、解散、被宣告破产等原因确需转让，我们将告知您接收方的名称与联系方式，并要求其继续履行本政策义务。</li>
+    <li><strong>公开披露：</strong>我们不会公开披露您的个人信息。依法需要公开披露时，我们会单独取得您的同意。</li>
+    <li><strong>法定例外：</strong>根据法律法规、诉讼争议解决需要，或应行政、司法机关的合法要求，我们可能依法提供必要信息。</li>
+  </ul>
+</section>
+
+<section id="s9">
+  <h2><span class="num">九</span>您如何管理自己的信息</h2>
+  <p>您对自己的个人信息享有以下权利，我们为您提供了便捷的行使方式：</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>权利</th><th>如何行使</th></tr>
+    <tr>
+      <td><strong>撤回同意</strong></td>
+      <td>
+        在游戏内进入「设置 → 隐私设置」重新选择；或直接在系统「设置 → 应用 → 渔王岛 → 存储 → 清除数据」中重置。
+        撤回同意后，广告 SDK 将停止采集，游戏其余功能不受影响。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>删除信息</strong></td>
+      <td>
+        卸载本游戏或在系统设置中清除应用数据，即可删除本机留存的全部游戏数据。
+        如需删除广告 SDK 已采集的信息，可通过下方邮箱联系我们协助处理。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>查阅、复制</strong></td>
+      <td>您可随时在游戏内查看自己的昵称、金币、存档进度；如需复制或导出，请通过邮箱联系我们。</td>
+    </tr>
+    <tr>
+      <td><strong>注销</strong></td>
+      <td>本游戏无账号体系，无需注销。卸载即视为终止使用，本地数据同步删除。</td>
+    </tr>
+    <tr>
+      <td><strong>投诉举报</strong></td>
+      <td>通过 <a href="mailto:15815965834@163.com">15815965834@163.com</a> 联系我们；若对处理结果不满意，您可向网信、工信、市场监管等主管部门投诉举报。</td>
+    </tr>
+  </table>
+  </div>
+</section>
+
+<section id="s10">
+  <h2><span class="num">十</span>未成年人保护</h2>
+  <p>
+    本游戏<strong>不面向 14 周岁以下的儿童</strong>，也不会主动收集儿童的个人信息。
+    若您是未满 14 周岁的儿童，请在监护人的陪同下阅读本政策，并在取得监护人同意后再使用本游戏。
+  </p>
+  <p>
+    若您是未成年人的监护人，当您对被监护人的个人信息有疑问，或发现我们在未获监护人同意的情况下收集了未成年人的信息，
+    请通过本政策第十二条的方式联系我们，我们会在核实后尽快删除相关信息。
+  </p>
+</section>
+
+<section id="s11">
+  <h2><span class="num">十一</span>本政策的更新</h2>
+  <p>我们可能因业务调整、法律法规变化或 SDK 升级而更新本政策。更新时我们将：</p>
+  <ul>
+    <li>在本页面更新“更新日期”，并保留历史版本供您查阅；</li>
+    <li>对于<strong>重大变更</strong>（如新增第三方 SDK、扩大信息收集范围、变更使用目的），我们会在游戏内以弹窗等显著方式再次征求您的同意；</li>
+    <li>若您不同意变更后的内容，您可以选择停止使用相关功能或卸载本游戏。</li>
+  </ul>
+</section>
+
+<section id="s12">
+  <h2><span class="num">十二</span>联系我们</h2>
+  <p>
+    若您对本政策有任何疑问、意见、建议或投诉，或希望行使上述个人信息权利，请通过以下方式与我们联系：
+  </p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>联系方式</th><th>内容</th></tr>
+    <tr><td>开发者</td><td>卓庆番</td></tr>
+    <tr><td>电子邮箱</td><td><a href="mailto:15815965834@163.com">15815965834@163.com</a></td></tr>
+    <tr><td>回复时限</td><td>收到请求后 15 个工作日内</td></tr>
+  </table>
+  </div>
+  <p>
+    为保障安全，我们可能需要先验证您的身份（例如核对设备信息）再处理您的请求。
+    对于您合理的请求，我们原则上不收取费用；对于重复、超出合理限度的请求，我们可能酌情收取一定成本费用。
+  </p>
+</section>
+
+<hr>
+<footer>
+  <p><b>渔王岛 隐私政策</b>　版本 v1.0　更新日期：2026 年 11 月 3 日　生效日期：2026 年 11 月 3 日</p>
+  <p>本政策适用于 Android 版《渔王岛》（包名 com.kamy.yuwantisle）。</p>
+  <p class="muted">本页面为静态页面，不设置 Cookie、不加载任何第三方脚本或统计代码。</p>
+</footer>
+
+</div>
+</body>
+</html>
